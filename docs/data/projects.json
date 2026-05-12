@@ -11,14 +11,15 @@
         "title": "ShareHub",
         "description": "A community-driven Android app for sharing resources within neighborhoods and organizations. Built with Kotlin and Firebase, it features user authentication, community management, resource listings with category filters, a reservation and lending system, push notifications via FCM, and real-time messaging.",
         "link": "https://github.com/Musila-ke/ShareHub",
-        "download": "https://github.com/Musila-ke/ShareHub/releases",
+        "download": "downloads/sharehub.apk",
         "github": "https://github.com/Musila-ke/ShareHub",
         "tags": ["Kotlin", "Android", "Firebase", "Firestore", "FCM", "Material Design"]
     },
     {
         "title": "SHIELD — Safety App",
-        "description": "A privacy-focused Android safety application designed to curb male Gender-Based Violence (GBV). Features one-tap SOS alerts with GPS location sharing for quick emergency response, encrypted incident journaling with audio recording to preserve evidence, a trusted support circle for alerts, and AES-256 encrypted local storage with optional Google Drive backup. Built with Kotlin and Room database.",
+        "description": "A privacy-focused Android safety application designed to curb male Gender-Based Violence (GBV). Features one-tap SOS alerts with GPS location sharing for quick emergency response, encrypted incident journaling with audio recording to preserve evidence, a trusted support circle for alerts, and AES-256 encrypted local storage with (upcoming feature: Google Drive backup). Built with Kotlin and Room database.",
         "link": "https://github.com/benitanettey/SafeWay",
+        "download": "downloads/safeway.apk",
         "github": "https://github.com/benitanettey/SafeWay",
         "tags": ["Kotlin", "Android", "Room DB", "MVVM", "AES-256", "GPS"]
     },

@@ -1,6 +1,6 @@
 // Portfolio Website - Main JavaScript
 // =====================================
-const ASSET_VERSION = '20260512-3';
+const ASSET_VERSION = '20260512-4';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
