@@ -121,7 +121,7 @@ async function initProjectsLoader() {
 
         // Observe newly-added project cards for reveal animation
         const observer = getRevealObserver();
-        observeWithStagger('.project-card', { observer, stagger: 0.08 });
+        observeWithStagger('.project-card', { observer });
     } catch (error) {
         console.error('Error loading projects:', error);
         const fallback = document.createElement('p');
@@ -217,7 +217,7 @@ function observeWithStagger(selector, { observer, className = 'reveal', stagger 
 function initRevealAnimations() {
     const observer = getRevealObserver();
 
-    observeWithStagger('.skill-category', { observer, stagger: 0.08 });
+    observeWithStagger('.skill-category', { observer });
     observeWithStagger('.contact-item', { observer, stagger: 0.1 });
     observeWithStagger('.section-header', { observer });
     observeWithStagger('.about-text', { observer });
