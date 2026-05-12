@@ -162,16 +162,30 @@ function createProjectCard(project, index) {
         projectContent.appendChild(tagsContainer);
     }
 
-    if (project.github) {
+    if (project.github || project.site) {
         const linksContainer = document.createElement('div');
         linksContainer.className = 'project-links';
-        const githubLink = document.createElement('a');
-        githubLink.href = project.github;
-        githubLink.target = '_blank';
-        githubLink.rel = 'noopener noreferrer';
-        githubLink.className = 'link-primary';
-        githubLink.textContent = 'GitHub';
-        linksContainer.appendChild(githubLink);
+
+        if (project.site) {
+            const siteLink = document.createElement('a');
+            siteLink.href = project.site;
+            siteLink.target = '_blank';
+            siteLink.rel = 'noopener noreferrer';
+            siteLink.className = 'link-primary';
+            siteLink.textContent = 'Visit Site';
+            linksContainer.appendChild(siteLink);
+        }
+
+        if (project.github) {
+            const githubLink = document.createElement('a');
+            githubLink.href = project.github;
+            githubLink.target = '_blank';
+            githubLink.rel = 'noopener noreferrer';
+            githubLink.className = project.site ? 'link-secondary' : 'link-primary';
+            githubLink.textContent = 'GitHub';
+            linksContainer.appendChild(githubLink);
+        }
+
         projectContent.appendChild(linksContainer);
     }
 

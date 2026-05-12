@@ -3,6 +3,7 @@
         "title": "TravelSync",
         "description": "A premium intercity bus booking platform built with Next.js 16 and React 19. Features interactive seat maps with premium and standard cabin layouts, real-time trip search, PDF ticket generation with QR codes, and a complete booking flow from route discovery to confirmation.",
         "link": "https://github.com/benitanettey/TravelSync",
+        "site": "https://travel-sync1-2.vercel.app/",
         "github": "https://github.com/benitanettey/TravelSync",
         "tags": ["Next.js", "React", "Ant Design", "JavaScript", "jspdf", "QR Code"]
     },
@@ -21,9 +22,10 @@
         "tags": ["Kotlin", "Android", "Room DB", "MVVM", "AES-256", "GPS"]
     },
     {
-        "title": "HotelOps",
+        "title": "StaySync",
         "description": "A hotel operations management system with role-based access for receptionists and housekeeping staff. Built with Node.js and Express, it features guest check-in and checkout workflows, real-time room status tracking, housekeeping task management with cleaning schedules, an occupancy dashboard with key metrics, and session-based authentication. Works fully offline with JSON-based data storage.",
         "link": "https://github.com/benitanettey/hotelops",
+        "site": "https://new-hotel-operations-management-sys.vercel.app/signup",
         "github": "https://github.com/benitanettey/hotelops",
         "tags": ["Node.js", "Express", "Handlebars", "Tailwind CSS", "Session Auth", "Hotel Management"]
     }
