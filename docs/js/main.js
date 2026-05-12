@@ -1,5 +1,6 @@
 // Portfolio Website - Main JavaScript
 // =====================================
+const ASSET_VERSION = '20260512-2';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -111,7 +112,7 @@ async function initProjectsLoader() {
     if (!projectsContainer) return;
 
     try {
-        const response = await fetch('data/projects.json');
+        const response = await fetch(`data/projects.json?v=${ASSET_VERSION}`);
         const projects = await response.json();
 
         projects.forEach((project, index) => {
