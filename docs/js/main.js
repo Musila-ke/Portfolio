@@ -31,7 +31,7 @@ function initNavigation() {
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
-            if (!href.startsWith('#')) return;
+            if (!href || !href.startsWith('#')) return;
             e.preventDefault();
 
             const targetId = href.substring(1);
@@ -189,7 +189,7 @@ function getRevealObserver() {
         rootMargin: '0px 0px -60px 0px'
     };
 
-    return new IntersectionObserver((entries) => {
+    return new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -201,8 +201,15 @@ function getRevealObserver() {
 
 function observeWithStagger(selector, { observer, className = 'reveal', stagger = 0 }) {
     document.querySelectorAll(selector).forEach((el, i) => {
-        if (stagger) el.style.transitionDelay = `${i * stagger}s`;
+        if (stagger) {
+            const delay = Math.min(i * stagger, 0.6);
+            el.style.transitionDelay = `${delay}s`;
+        }
         el.classList.add(className);
+        if (isInViewport(el)) {
+            el.classList.add('visible');
+            return;
+        }
         observer.observe(el);
     });
 }
@@ -259,4 +266,10 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    return rect.top < viewportHeight && rect.bottom > 0;
 }
