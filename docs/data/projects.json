@@ -11,6 +11,7 @@
         "title": "ShareHub",
         "description": "A community-driven Android app for sharing resources within neighborhoods and organizations. Built with Kotlin and Firebase, it features user authentication, community management, resource listings with category filters, a reservation and lending system, push notifications via FCM, and real-time messaging.",
         "link": "https://github.com/Musila-ke/ShareHub",
+        "download": "https://github.com/Musila-ke/ShareHub/releases",
         "github": "https://github.com/Musila-ke/ShareHub",
         "tags": ["Kotlin", "Android", "Firebase", "Firestore", "FCM", "Material Design"]
     },

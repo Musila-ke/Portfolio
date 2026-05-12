@@ -1,6 +1,6 @@
 // Portfolio Website - Main JavaScript
 // =====================================
-const ASSET_VERSION = '20260512-2';
+const ASSET_VERSION = '20260512-3';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -163,7 +163,7 @@ function createProjectCard(project, index) {
         projectContent.appendChild(tagsContainer);
     }
 
-    if (project.github || project.site) {
+    if (project.github || project.site || project.download) {
         const linksContainer = document.createElement('div');
         linksContainer.className = 'project-links';
 
@@ -177,12 +177,21 @@ function createProjectCard(project, index) {
             linksContainer.appendChild(siteLink);
         }
 
+        if (project.download) {
+            const downloadLink = document.createElement('a');
+            downloadLink.href = project.download;
+            downloadLink.setAttribute('download', '');
+            downloadLink.className = project.site ? 'link-secondary' : 'link-primary';
+            downloadLink.textContent = 'Download App';
+            linksContainer.appendChild(downloadLink);
+        }
+
         if (project.github) {
             const githubLink = document.createElement('a');
             githubLink.href = project.github;
             githubLink.target = '_blank';
             githubLink.rel = 'noopener noreferrer';
-            githubLink.className = project.site ? 'link-secondary' : 'link-primary';
+            githubLink.className = (project.site || project.download) ? 'link-secondary' : 'link-primary';
             githubLink.textContent = 'GitHub';
             linksContainer.appendChild(githubLink);
         }
