@@ -1,0 +1,30 @@
+[
+    {
+        "title": "TravelSync",
+        "description": "A premium intercity bus booking platform built with Next.js 16 and React 19. Features interactive seat maps with premium and standard cabin layouts, real-time trip search, PDF ticket generation with QR codes, and a complete booking flow from route discovery to confirmation.",
+        "link": "https://github.com/benitanettey/TravelSync",
+        "github": "https://github.com/benitanettey/TravelSync",
+        "tags": ["Next.js", "React", "Ant Design", "JavaScript", "jspdf", "QR Code"]
+    },
+    {
+        "title": "ShareHub",
+        "description": "A community-driven Android app for sharing resources within neighborhoods and organizations. Built with Kotlin and Firebase, it features user authentication, community management, resource listings with category filters, a reservation and lending system, push notifications via FCM, and real-time messaging.",
+        "link": "https://github.com/Musila-ke/ShareHub",
+        "github": "https://github.com/Musila-ke/ShareHub",
+        "tags": ["Kotlin", "Android", "Firebase", "Firestore", "FCM", "Material Design"]
+    },
+    {
+        "title": "SHIELD — Safety App",
+        "description": "A privacy-focused Android safety application designed to curb male Gender-Based Violence (GBV). Features one-tap SOS alerts with GPS location sharing for quick emergency response, encrypted incident journaling with audio recording to preserve evidence, a trusted support circle for alerts, and AES-256 encrypted local storage with optional Google Drive backup. Built with Kotlin and Room database.",
+        "link": "https://github.com/benitanettey/SafeWay",
+        "github": "https://github.com/benitanettey/SafeWay",
+        "tags": ["Kotlin", "Android", "Room DB", "MVVM", "AES-256", "GPS"]
+    },
+    {
+        "title": "HotelOps",
+        "description": "A hotel operations management system with role-based access for receptionists and housekeeping staff. Built with Node.js and Express, it features guest check-in and checkout workflows, real-time room status tracking, housekeeping task management with cleaning schedules, an occupancy dashboard with key metrics, and session-based authentication. Works fully offline with JSON-based data storage.",
+        "link": "https://github.com/benitanettey/hotelops",
+        "github": "https://github.com/benitanettey/hotelops",
+        "tags": ["Node.js", "Express", "Handlebars", "Tailwind CSS", "Session Auth", "Hotel Management"]
+    }
+]
