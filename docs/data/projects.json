@@ -15,7 +15,7 @@
     },
     {
         "title": "SHIELD — Safety App",
-        "description": "A privacy-focused Android safety application designed to curb male Gender-Based Violence (GBV). Features one-tap SOS alerts with GPS location sharing for quick emergency response, encrypted incident journaling with audio recording to preserve evidence, a trusted support circle for alerts, and AES-256 encrypted local storage with (upcoming feature: Google Drive backup). Built with Kotlin and Room database.",
+        "description": "A privacy-focused Android safety application designed to curb male Gender-Based Violence (GBV). Features one-tap SOS alerts with GPS location sharing for quick emergency response, encrypted incident journaling with audio recording to preserve evidence, a trusted support circle for alerts, and AES-256 encrypted local storage with (upcoming feature: Google Drive backup). Built with Kotlin and Room database.\n\nHands-free earbuds/airpods controls — double-tap your earbuds to start/stop covert audio recording, triple-tap to trigger an instant SOS alert with your GPS location sent to your support circle. The app runs a silent audio track to keep your earbuds connected and listening for button presses, even with the screen off.",
         "download": "downloads/safeway.apk",
         "github": "https://github.com/benitanettey/SafeWay",
         "tags": ["Kotlin", "Android", "Room DB", "MVVM", "AES-256", "GPS"]
