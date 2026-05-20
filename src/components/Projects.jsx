@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Download } from 'lucide-react';
 
 const containerVariants = {
   hidden: {},
@@ -10,6 +10,39 @@ const containerVariants = {
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const linkPrimaryStyle = {
+  flex: 1,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '0.5rem',
+  padding: '0.625rem 1rem',
+  borderRadius: 'var(--radius-md)',
+  textDecoration: 'none',
+  fontWeight: 500,
+  fontSize: 'var(--text-sm)',
+  background: 'var(--color-accent)',
+  color: 'var(--color-bg)',
+  transition: 'background 0.2s ease',
+};
+
+const linkSecondaryStyle = {
+  flex: 1,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '0.5rem',
+  padding: '0.625rem 1rem',
+  borderRadius: 'var(--radius-md)',
+  textDecoration: 'none',
+  fontWeight: 500,
+  fontSize: 'var(--text-sm)',
+  background: 'transparent',
+  color: 'var(--color-text-muted)',
+  border: '1px solid var(--color-border)',
+  transition: 'all 0.2s ease',
 };
 
 export default function Projects() {
@@ -147,28 +180,44 @@ export default function Projects() {
                     className="project-links"
                     style={{ display: 'flex', gap: 'var(--space-sm)' }}
                   >
+                    {project.site && (
+                      <a
+                        href={project.site}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={linkPrimaryStyle}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-accent-light)')}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-accent)')}
+                      >
+                        <ExternalLink size={16} />
+                        Visit Site
+                      </a>
+                    )}
+                    {project.download && (
+                      <a
+                        href={project.download}
+                        style={linkPrimaryStyle}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-accent-light)')}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-accent)')}
+                      >
+                        <Download size={16} />
+                        Download APK
+                      </a>
+                    )}
                     {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                          flex: 1,
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '0.5rem',
-                          padding: '0.625rem 1rem',
-                          borderRadius: 'var(--radius-md)',
-                          textDecoration: 'none',
-                          fontWeight: 500,
-                          fontSize: 'var(--text-sm)',
-                          background: 'var(--color-accent)',
-                          color: 'var(--color-bg)',
-                          transition: 'background 0.2s ease',
+                        style={linkSecondaryStyle}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--color-accent-dim)';
+                          e.currentTarget.style.color = 'var(--color-accent)';
                         }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-accent-light)')}
-                        onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-accent)')}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--color-border)';
+                          e.currentTarget.style.color = 'var(--color-text-muted)';
+                        }}
                       >
                         <Github size={16} />
                         GitHub
